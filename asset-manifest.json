@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Gladtopia/static/css/main.41a6dffa.css",
-    "main.js": "/Gladtopia/static/js/main.3a0a89ae.js",
+    "main.js": "/Gladtopia/static/js/main.1967375f.js",
     "static/js/592.cfab99f6.chunk.js": "/Gladtopia/static/js/592.cfab99f6.chunk.js",
     "static/media/gladtopia.png": "/Gladtopia/static/media/gladtopia.9c0eb8f1df2b121fb79e.png",
     "index.html": "/Gladtopia/index.html",
     "main.41a6dffa.css.map": "/Gladtopia/static/css/main.41a6dffa.css.map",
-    "main.3a0a89ae.js.map": "/Gladtopia/static/js/main.3a0a89ae.js.map",
+    "main.1967375f.js.map": "/Gladtopia/static/js/main.1967375f.js.map",
     "592.cfab99f6.chunk.js.map": "/Gladtopia/static/js/592.cfab99f6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41a6dffa.css",
-    "static/js/main.3a0a89ae.js"
+    "static/js/main.1967375f.js"
   ]
 }
