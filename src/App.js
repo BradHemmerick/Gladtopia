@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
+import DailyChallenge from './components/DailyChallenge';
 import './App.css';
+import logo from './gladtopia.png'; 
 
-function App() {
+
+const Home = () => {
+  const { theme, toggleTheme } = useTheme();
+  const icon = theme === 'dark' ? '🌞' : '🌜';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={`app ${theme === 'dark' ? 'dark-mode' : ''}`}>
+      <header className="app-header">
+        <img src={logo} alt="Gladtopia Logo" className="logo" />
+        <h1>Gladtopia</h1>
+        <button onClick={toggleTheme} className="theme-toggle-btn">{icon}</button>
       </header>
+      <main className="main-content">
+        <DailyChallenge />
+      </main>
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+  );
+};
 
 export default App;
